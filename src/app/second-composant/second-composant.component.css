@@ -1,0 +1,14 @@
+h2 {
+  color: darkblue;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
