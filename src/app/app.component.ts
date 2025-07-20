@@ -1,19 +1,19 @@
-import {Component, Renderer2} from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FirstComposantComponent } from './first-composant/first-composant.component';
 import { FormsModule } from '@angular/forms';
-import { NgForOf, NgIf} from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FirstComposantComponent, FormsModule, NgIf, NgForOf],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']  // ✅ correction ici
 })
 export class AppComponent {
   title = 'firstApp';
-  chaine:string = "je bois de";
-  nom :string = "isaia"
+  chaine: string = "je bois de";
+  nom: string = "isaia";
 
   constructor(private renderer: Renderer2) {
     this.setBodyBackground();
@@ -24,28 +24,27 @@ export class AppComponent {
     this.renderer.setStyle(document.body, 'background', bgGradient);
   }
 
-  xfunction (){
+  xfunction() {
     return "l'eau";
   }
 
   aCocher = true;
 
-  toCheck(){
+  toCheck() {
     return true;
   }
 
-  displayAlert(msg: string){
+  displayAlert(msg: string) {
     window.alert(msg);
   }
 
-  attributSource1="Mangue"
+  attributSource1 = "Mangue";
 
   afficherParagraphe: boolean = false;
 
   estAffichable(): boolean {
     return this.afficherParagraphe;
   }
-
 
   monTableau = [
     { nom1: 'John', nom2: 'Doe' },
@@ -66,11 +65,4 @@ export class AppComponent {
   getRandomColor(): string {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
-
-
-  //*ngif=aCocher
-
-
-
-
 }
