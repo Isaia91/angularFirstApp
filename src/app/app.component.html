@@ -323,6 +323,58 @@
     </div>
   </div>
 </main>
+<p>{{ chaine }}</p>
+<p>{{ xfunction() }}</p>
+
+<p>HELLLLO</p>
+
+<input type="checkbox" [checked]="aCocher" />
+
+<input type="checkbox"  [checked]="toCheck()" />
+
+<p class="loremispum" (click)="displayAlert('clicked')" style="border: solid; margin-bottom: 20px;">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p class="loremispum" (pointerover)="displayAlert('oops')" style="border: solid;border-color: red">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p *ngIf="aCocher"> La case est cochée azhehazheaheahhehaehahehazheazhehazhehazheahzeh</p>
+
+<h1>bonjour {{nom}} !!</h1>
+<input type="text" [(ngModel)]="nom" name="nom">
+
+<app-first-composant firstitem="POIRE" [secconditem]="attributSource1"></app-first-composant>
+
+
+
+
+<input type="checkbox" id="toDisplay" name="toDisplay" (change)="afficherParagraphe = !afficherParagraphe" />
+<label for="toDisplay">Scales</label>
+
+<p *ngIf="afficherParagraphe" style="border: solid; margin-bottom: 20px;">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<ul>
+  <h3>Mon tableau</h3>
+  <li *ngFor="let item of monTableau">
+    {{ item.nom1 + " "+ item.nom2}}
+  </li>
+</ul>
+
+
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
